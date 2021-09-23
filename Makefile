@@ -3,10 +3,10 @@ all: mathport
 mathport-lib:
 	cd Lib && lake build-lib
 
-mathport-app: mathport-lib
-	cd App && lake build-bin
+mathport-app:
+	cd Lib && lake build-bin
 
-mathport: mathport-lib mathport-app
+mathport: mathport-app
 
 clean:
 	rm -rf Lib/build/ App/build/
